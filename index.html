@@ -255,12 +255,21 @@
         }
         
         .card-image img {
+            display: none; /* Hidden until we add real images */
+        }
+        
+        .card-category-icon {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--gold);
+            font-size: 4rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            text-align: center;
+            opacity: 0.3;
+            pointer-events: none;
         }
         
         .card-play-icon {
@@ -395,6 +404,7 @@
         }
         
         .modal-video {
+            display: none; /* Hidden until correct videos are added */
             width: 100%;
             aspect-ratio: 16/9;
             background: var(--gray-900);
@@ -673,45 +683,56 @@
             <div class="resource-grid">
                 <!-- EXAMPLE RESOURCE 1 - Enhanced with detailed content -->
                 <div class="resource-card" onclick='openModal({
-                    category: "John Piper",
-                    title: "What is Worship?",
-                    description: "Deep dive into the biblical definition and purpose of worship",
+                    category: "John Piper - Desiring God Ministries",
+                    title: "What is Worship? The Heart of Christian Living",
+                    description: "A comprehensive exploration of worship as God-centered gladness and the supreme purpose of human existence",
                     videoId: "YqcEF7vNvXQ",
                     scripture: {
-                        text: "God is spirit, and those who worship him must worship in spirit and truth.",
-                        reference: "John 4:24"
+                        text: "God is spirit, and those who worship him must worship in spirit and truth. Yet a time is coming and has now come when the true worshipers will worship the Father in the Spirit and in truth, for they are the kind of worshipers the Father seeks. Worship the Lord your God, and serve him only.",
+                        reference: "John 4:23-24, Matthew 4:10"
                     },
                     quote: {
-                        text: "Worship is a way of gladly reflecting back to God the radiance of his worth.",
-                        author: "John Piper"
+                        text: "Worship is a way of gladly reflecting back to God the radiance of his worth. This cannot be done by mere acts of duty. It can only be done when spontaneous affections arise in the heart. Worship is an affair of the heart.",
+                        author: "John Piper, Desiring God"
                     },
                     spiritualTruths: [
-                        "Worship is the overflow of treasuring Christ above all things",
-                        "True worship requires both heart engagement (spirit) and doctrinal accuracy (truth)",
-                        "God seeks worshipers who worship in spirit and truth - it is His desire and design",
-                        "Worship is not primarily about us or our feelings, but about God and His worth"
+                        "Worship is not primarily about music or Sunday services - it is the way of life of treasuring Christ above all things",
+                        "God is most glorified in us when we are most satisfied in Him - joy and glory go together in true worship",
+                        "Worship in spirit means worship from the heart with genuine affection, not mere external compliance or ritual",
+                        "Worship in truth means worship according to the true nature of God as He has revealed Himself in Scripture",
+                        "The heart of worship is satisfaction in God that overflows in submission and service to God",
+                        "Corporate worship on Sunday prepares and reflects our daily worship Monday through Saturday",
+                        "Worship is both vertical (Godward) and horizontal (serving others out of love for God)",
+                        "The essence of sin is preferring anything above God; the essence of worship is treasuring God above everything"
                     ],
                     practicalApplications: [
-                        "Evaluate your personal worship: Does it reflect both passion and biblical truth?",
-                        "Before leading worship on Sunday, spend time in personal worship during the week",
-                        "Choose songs that are both emotionally engaging and theologically sound",
-                        "Help your congregation understand that worship extends beyond the Sunday service into daily life"
+                        "Personal Assessment: Examine your heart - Are you going through motions or genuinely delighting in God? Worship is not complete without heartfelt affection",
+                        "Weekly Preparation: Spend at least 30 minutes in personal worship (Bible reading, prayer, meditation) before leading corporate worship",
+                        "Song Selection: Choose songs that are both emotionally engaging AND theologically accurate - both spirit and truth must be present",
+                        "Teaching Your Team: Help musicians understand they are worshipers first, musicians second. Model authentic worship in rehearsals",
+                        "Congregational Education: Regularly remind your church that worship is not the 20-minute music segment but their entire lives lived for Gods glory",
+                        "Monday Morning Test: Ask yourself - Does my worship end when I leave the building? If so, it was performance, not worship",
+                        "Heart Preparation: Before stepping on stage, pray: God, help me treasure You above the approval of people, the excellence of performance, or the energy of the moment",
+                        "Lifestyle Integration: Practice worship through everyday obedience - cleaning dishes, working your job, raising children - all for Gods glory"
                     ],
                     takeaways: [
-                        "Worship is treasuring Christ above all things",
-                        "Corporate worship prepares us for daily worship",
-                        "The goal of worship is to glorify God by delighting in Him"
+                        "Worship is treasuring Christ above all things - if your heart is cold, its not worship no matter how good the music sounds",
+                        "God seeks worshipers who worship in both spirit (genuine heart affection) and truth (biblical accuracy about who God is)",
+                        "Corporate worship is the overflow and expression of daily worship - Sunday reflects Monday through Saturday",
+                        "The goal of worship is Gods glory through our joy in Him - these are not opposites but partners",
+                        "Leading worship requires being a worshiper yourself - you cannot lead others where you have not been",
+                        "Worship is not about us feeling good, it is about God receiving glory - but in receiving glory, He gives us joy"
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/YqcEF7vNvXQ/maxresdefault.jpg" alt="What is Worship?">
                         <div class="card-play-icon"></div>
                     </div>
                     <div class="card-content">
-                        <div class="card-category">John Piper</div>
-                        <h3 class="card-title">What is Worship?</h3>
-                        <p class="card-description">Deep dive into the biblical definition and purpose of worship</p>
-                    
+                        <div class="card-category">John Piper - Desiring God Ministries</div>
+                        <h3 class="card-title">What is Worship? The Heart of Christian Living</h3>
+                        <p class="card-description">A comprehensive exploration of worship as God-centered gladness and the supreme purpose of human existence</p>
                     </div>
                 </div>
                 
@@ -743,6 +764,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/rH8JFLdOch4/maxresdefault.jpg" alt="Why Do We Worship?">
                         <div class="card-play-icon"></div>
                     </div>
@@ -786,6 +808,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/p_dLJgHAeuc/maxresdefault.jpg" alt="The Heart of Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -825,6 +848,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/DLOQ6rIyhyw/maxresdefault.jpg" alt="How Great Is Our God">
                         <div class="card-play-icon"></div>
                     </div>
@@ -864,6 +888,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/6KPAZRZEUu4/maxresdefault.jpg" alt="The Gospel and Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -903,6 +928,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/jUk6P9PAmqg/maxresdefault.jpg" alt="Biblical Foundations for Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -946,6 +972,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/2u6CX5BF8RQ/maxresdefault.jpg" alt="Worship Matters">
                         <div class="card-play-icon"></div>
                     </div>
@@ -985,6 +1012,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/1rXZzW7mJJ8/maxresdefault.jpg" alt="Look and Live">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1024,6 +1052,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/iDFrqDZVJl0/maxresdefault.jpg" alt="What Does the Bible Say About Worship?">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1063,6 +1092,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/bvdAkMa2M-I/maxresdefault.jpg" alt="Understanding Worship Theology">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1113,6 +1143,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">🎵</div>
                         <img src="https://img.youtube.com/vi/MvBkI9rL7BU/maxresdefault.jpg" alt="How to Choose Worship Songs">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1152,6 +1183,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/8c8VZ9xHx7w/maxresdefault.jpg" alt="Theologically Vetting Worship Songs">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1195,6 +1227,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/Vj7O1FOfR7E/maxresdefault.jpg" alt="The Importance of Congregational Singing">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1234,6 +1267,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/n7N2sWXCPe8/maxresdefault.jpg" alt="Balancing Old and New Songs">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1273,6 +1307,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/4J8d6xjT5m8/maxresdefault.jpg" alt="Choosing Gospel-Centered Songs">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1312,6 +1347,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/q2vWvnYMh5I/maxresdefault.jpg" alt="Selecting Songs for Your Church Context">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1351,6 +1387,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/5nXoZGkpKvg/maxresdefault.jpg" alt="The Art of Song Selection">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1394,6 +1431,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/i0nZSUGWBP0/maxresdefault.jpg" alt="Songs That Endure">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1443,6 +1481,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📋</div>
                         <img src="https://img.youtube.com/vi/8yYXw5ePrzc/maxresdefault.jpg" alt="Building a Worship Setlist with Flow">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1478,6 +1517,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/lYk3yXJVBgc/maxresdefault.jpg" alt="Keys and Transitions in Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1517,6 +1557,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/r9O_U4kxHJM/maxresdefault.jpg" alt="The Liturgical Shape of Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1552,6 +1593,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/VxEw0M5p8bQ/maxresdefault.jpg" alt="Creating Momentum in Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1595,6 +1637,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/TkKd8FXf3gU/maxresdefault.jpg" alt="Spontaneity in Setlists">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1630,6 +1673,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/Hx5w9RvN2AU/maxresdefault.jpg" alt="Planning for the Unexpected">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1683,6 +1727,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">🎤</div>
                         <img src="https://img.youtube.com/vi/C2XZD4V8gMU/maxresdefault.jpg" alt="Leading Worship with Authenticity">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1722,6 +1767,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/0c6MJq6bKfQ/maxresdefault.jpg" alt="Engaging the Congregation">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1761,6 +1807,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/H7YThqE8pqw/maxresdefault.jpg" alt="Platform Presence and Confidence">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1800,6 +1847,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/p8xJMqDPq0k/maxresdefault.jpg" alt="Speaking Between Songs">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1839,6 +1887,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/kBq0cE9Vu9k/maxresdefault.jpg" alt="Leading with Energy and Passion">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1878,6 +1927,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/WJmR8Aklk8I/maxresdefault.jpg" alt="Reading the Room in Worship">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1921,6 +1971,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/u2mV9TX5JFI/maxresdefault.jpg" alt="Leading from Rest, Not Striving">
                         <div class="card-play-icon"></div>
                     </div>
@@ -1960,6 +2011,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/3QOWbFKnFDc/maxresdefault.jpg" alt="The Worship Leader as Worshiper">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2009,6 +2061,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">👥</div>
                         <img src="https://img.youtube.com/vi/vC5JKX2_8Io/maxresdefault.jpg" alt="Building a Healthy Worship Team Culture">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2048,6 +2101,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/kzlBj9W8bV4/maxresdefault.jpg" alt="Recruiting and Developing Musicians">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2087,6 +2141,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/9sT3CzbHyIM/maxresdefault.jpg" alt="Caring for Your Team Spiritually">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2126,6 +2181,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/qRnHb8Hs7uE/maxresdefault.jpg" alt="Dealing with Difficult Team Members">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2169,6 +2225,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/LtqhW2sL7RM/maxresdefault.jpg" alt="Preventing Burnout in Worship Ministry">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2208,6 +2265,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/pW_qMnMx96A/maxresdefault.jpg" alt="Raising Up Worship Leaders">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2257,6 +2315,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">⏱️</div>
                         <img src="https://img.youtube.com/vi/hU4ZWKdvApI/maxresdefault.jpg" alt="Running Effective Rehearsals">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2296,6 +2355,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/qw5F4Fzp0pQ/maxresdefault.jpg" alt="Personal Practice and Preparation">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2331,6 +2391,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/b8gF-VxQFyI/maxresdefault.jpg" alt="Creating Rehearsal Tracks">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2370,6 +2431,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/Z8yQXN-pHGk/maxresdefault.jpg" alt="Communicating Arrangements">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2413,6 +2475,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/kU7N-pOV5h0/maxresdefault.jpg" alt="Pre-Service Prayer">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2448,6 +2511,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/fUO5kFfJGxU/maxresdefault.jpg" alt="Soundcheck Best Practices">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2470,6 +2534,7 @@
             <div class="resource-grid">
                 <div class="resource-card" onclick='openModal({category:"Worship Tutorials",title:"Vocal Warm-Ups for Worship Leaders",description:"Essential vocal exercises before leading worship",videoId:"1c1cCjHVpnE",scripture:{text:"Make a joyful noise to the Lord, all the earth; break forth into joyous song and sing praises!",reference:"Psalm 98:4"},spiritualTruths:["Your voice is an instrument for Gods glory","Vocal health enables sustainable ministry","Preparation includes caring for your physical instrument","Excellence in singing honors the Creator"],practicalApplications:["Warm up your voice before every rehearsal and service","Hydrate well - drink plenty of water","Avoid dairy and caffeine before singing","Practice proper breathing techniques"],takeaways:["Vocal warm-ups prevent strain and injury","Your voice is a gift to steward well","Preparation includes physical care"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">🎙️</div>
                         <img src="https://img.youtube.com/vi/1c1cCjHVpnE/maxresdefault.jpg" alt="Vocal Warm-Ups"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Worship Tutorials</div>
@@ -2479,6 +2544,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Vocal Coach",title:"Singing with Proper Technique",description:"Breathing, posture, and technique for worship vocalists",videoId:"2mxSZX_h4Ws",takeaways:["Proper technique prevents vocal damage","Good breath support enables better singing","Posture affects vocal quality"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/2mxSZX_h4Ws/maxresdefault.jpg" alt="Singing Technique"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Vocal Coach</div>
@@ -2488,6 +2554,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Kari Jobe",title:"Finding Your Vocal Range",description:"Understanding your voice and singing within your range",videoId:"8zBPr3Z6XJg",takeaways:["Know your comfortable range","Do not strain to hit notes outside your range","Choosing the right key prevents vocal fatigue"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/8zBPr3Z6XJg/maxresdefault.jpg" alt="Vocal Range"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Kari Jobe</div>
@@ -2497,6 +2564,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Worship Vocals",title:"Vocal Health and Care",description:"Maintaining vocal health for long-term ministry",videoId:"Rt5XC7FLx6Q",takeaways:["Rest your voice when sick","Avoid shouting or straining","Get proper sleep and hydration"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/Rt5XC7FLx6Q/maxresdefault.jpg" alt="Vocal Health"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Worship Vocals</div>
@@ -2506,6 +2574,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Phil Wickham",title:"Leading Worship with Vocal Confidence",description:"Singing with authority while staying authentic",videoId:"gHf3UEWXLMU",takeaways:["Confidence comes from preparation","Your voice carries the message","Sing with conviction, not perfection"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/gHf3UEWXLMU/maxresdefault.jpg" alt="Vocal Confidence"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Phil Wickham</div>
@@ -2515,6 +2584,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Vocal Lessons",title:"Harmonizing in Worship",description:"Creating vocal harmony parts for worship teams",videoId:"FE0Pm4KG33A",takeaways:["Harmony adds richness to worship","Listen and blend, do not overpower","Practice harmony parts in rehearsal"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/FE0Pm4KG33A/maxresdefault.jpg" alt="Harmonizing"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Vocal Lessons</div>
@@ -2535,6 +2605,7 @@
             <div class="resource-grid">
                 <div class="resource-card" onclick='openModal({category:"John Piper",title:"The Worship Leaders Devotional Life",description:"Maintaining personal intimacy with God in public ministry",videoId:"qWKFRaCvWCY",scripture:{text:"But seek first the kingdom of God and his righteousness, and all these things will be added to you.",reference:"Matthew 6:33"},spiritualTruths:["Public ministry flows from private devotion","You cannot lead others where you have not been","Intimacy with God is the foundation of all ministry","Ministry success without spiritual health is failure"],practicalApplications:["Guard your daily time with God zealously","Read Scripture for yourself, not just for sermons","Maintain regular confession and repentance","Pursue God when you do not feel like it"],takeaways:["Private worship fuels public worship","Devotional life is not optional for leaders","Intimacy with God sustains ministry"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">✨</div>
                         <img src="https://img.youtube.com/vi/qWKFRaCvWCY/maxresdefault.jpg" alt="Devotional Life"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">John Piper</div>
@@ -2544,6 +2615,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Francis Chan",title:"Preventing Ministry Burnout",description:"Staying spiritually healthy in the demands of ministry",videoId:"HOPqPB_DkzI",takeaways:["Burnout often signals spiritual dryness","Rest is not weakness, it is obedience","Sustainable ministry requires boundaries"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/HOPqPB_DkzI/maxresdefault.jpg" alt="Preventing Burnout"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Francis Chan</div>
@@ -2553,6 +2625,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Paul David Tripp",title:"The Danger of Familiarity in Ministry",description:"Guarding your heart against becoming numb to sacred things",videoId:"fW6xkJcDxno",takeaways:["Familiarity can breed complacency","Continually cultivate awe and wonder","Ministry exposure does not equal spiritual maturity"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/fW6xkJcDxno/maxresdefault.jpg" alt="Danger of Familiarity"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Paul David Tripp</div>
@@ -2562,6 +2635,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Jennie Allen",title:"Fighting Comparison in Ministry",description:"Overcoming envy and finding contentment in your calling",videoId:"9QaTH6zHjPk",takeaways:["Comparison steals joy and contentment","Your calling is unique to you","Focus on faithfulness, not comparison"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/9QaTH6zHjPk/maxresdefault.jpg" alt="Fighting Comparison"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Jennie Allen</div>
@@ -2571,6 +2645,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Matt Chandler",title:"Dealing with Pride in Leadership",description:"Recognizing and battling pride in ministry",videoId:"C2BExZ-H8KU",takeaways:["Pride is the greatest danger in ministry","Humility is cultivated, not achieved","Accountability protects against pride"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/C2BExZ-H8KU/maxresdefault.jpg" alt="Dealing with Pride"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Matt Chandler</div>
@@ -2580,6 +2655,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Christine Caine",title:"Leading from Overflow, Not Emptiness",description:"Ministry that flows from spiritual abundance",videoId:"cj-y8hLFt5M",takeaways:["You cannot pour from an empty cup","Overflow comes from abiding in Christ","Ministry effectiveness requires spiritual fullness"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/cj-y8hLFt5M/maxresdefault.jpg" alt="Leading from Overflow"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Christine Caine</div>
@@ -2589,6 +2665,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Timothy Keller",title:"The Gospel for Ministry Leaders",description:"Applying the gospel to your own heart in ministry",videoId:"X1M9bvEW8cQ",takeaways:["The gospel is for ministers too","Preach the gospel to yourself daily","Grace frees you from performance"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/X1M9bvEW8cQ/maxresdefault.jpg" alt="Gospel for Leaders"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Timothy Keller</div>
@@ -2598,6 +2675,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Beth Moore",title:"Staying Grounded in Scripture",description:"Making Gods Word central in your life and ministry",videoId:"2pDQH3O8zD8",takeaways:["Scripture anchors us in truth","Gods Word sustains ministry","Read the Bible for yourself, not just for teaching"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/2pDQH3O8zD8/maxresdefault.jpg" alt="Grounded in Scripture"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Beth Moore</div>
@@ -2618,6 +2696,7 @@
             <div class="resource-grid">
                 <div class="resource-card" onclick='openModal({category:"Patrick Lencioni",title:"Having Difficult Conversations",description:"Biblical approaches to conflict resolution in ministry",videoId:"WoFlIjBrP8M",scripture:{text:"If your brother sins against you, go and tell him his fault, between you and him alone.",reference:"Matthew 18:15"},spiritualTruths:["Conflict avoided becomes conflict multiplied","Speaking truth in love protects relationships","Biblical confrontation is an act of love","Healthy teams address issues directly"],practicalApplications:["Address conflicts quickly and privately","Assume best intentions until proven otherwise","Focus on behavior, not character attacks","Seek reconciliation, not just resolution"],takeaways:["Healthy conflict strengthens teams","Avoidance is not peace","Biblical confrontation protects unity"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">💬</div>
                         <img src="https://img.youtube.com/vi/WoFlIjBrP8M/maxresdefault.jpg" alt="Difficult Conversations"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Patrick Lencioni</div>
@@ -2627,6 +2706,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Leadership Skills",title:"Giving Constructive Feedback",description:"How to correct and encourage team members effectively",videoId:"V96z62yO9Sg",takeaways:["Feedback is a gift when given with love","Be specific, not vague","Balance correction with encouragement"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/V96z62yO9Sg/maxresdefault.jpg" alt="Constructive Feedback"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Leadership Skills</div>
@@ -2636,6 +2716,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Ministry Leadership",title:"Dealing with Critical People",description:"Responding with grace to criticism and negativity",videoId:"HxIi1mXKzJo",takeaways:["Not all criticism is wrong","Listen for kernels of truth","Respond with humility, not defensiveness"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/HxIi1mXKzJo/maxresdefault.jpg" alt="Critical People"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Ministry Leadership</div>
@@ -2645,6 +2726,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Church Leadership",title:"When to Remove Someone from the Team",description:"Difficult decisions about team membership",videoId:"R8OIBkChiFo",takeaways:["Sometimes love means saying no","Protect the health of the whole team","Give people chances but know when to move on"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/R8OIBkChiFo/maxresdefault.jpg" alt="Removing Team Members"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Church Leadership</div>
@@ -2654,6 +2736,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Conflict Resolution",title:"Mediating Team Conflicts",description:"Helping team members resolve disputes",videoId:"8SL-PGZFaBg",takeaways:["Stay neutral and listen to both sides","Focus on facts, not feelings","Seek win-win solutions when possible"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/8SL-PGZFaBg/maxresdefault.jpg" alt="Mediating Conflicts"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Conflict Resolution</div>
@@ -2663,6 +2746,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Communication Skills",title:"Receiving Feedback with Grace",description:"How to respond when you receive correction",videoId:"nRRbG85wYDc",takeaways:["Feedback is a gift for growth","Defensiveness prevents learning","Thank people for caring enough to speak"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/nRRbG85wYDc/maxresdefault.jpg" alt="Receiving Feedback"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Communication Skills</div>
@@ -2683,6 +2767,7 @@
             <div class="resource-grid">
                 <div class="resource-card" onclick='openModal({category:"Church Sound",title:"Sound System Basics for Worship",description:"Understanding church sound systems and mixing",videoId:"tAQhfNq0BRQ",scripture:{text:"Let all things be done decently and in order.",reference:"1 Corinthians 14:40"},spiritualTruths:["Technical excellence removes barriers to worship","Sound quality affects congregational participation","Stewardship includes caring for equipment","Excellence honors God in every detail"],practicalApplications:["Learn basic sound terminology and equipment","Work closely with your sound team","Test sound before every service","Invest in quality gear within your budget"],takeaways:["Good sound serves worship","Technical knowledge is valuable for leaders","Excellence includes the technical side"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">🔧</div>
                         <img src="https://img.youtube.com/vi/tAQhfNq0BRQ/maxresdefault.jpg" alt="Sound System Basics"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Church Sound</div>
@@ -2692,6 +2777,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Production Tips",title:"Stage Lighting for Worship",description:"Using lighting effectively without distraction",videoId:"Ml18K4h6x8s",takeaways:["Lighting sets atmosphere and focus","Less is often more with lighting","Work with your lighting team"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/Ml18K4h6x8s/maxresdefault.jpg" alt="Stage Lighting"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Production Tips</div>
@@ -2701,6 +2787,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Audio Engineering",title:"Monitor Mix Essentials",description:"Creating good monitor mixes for your team",videoId:"pHQDvfEKLXA",takeaways:["Good monitors help musicians play confidently","Each person needs different monitor mixes","Communicate clearly about monitor needs"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/pHQDvfEKLXA/maxresdefault.jpg" alt="Monitor Mixes"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Audio Engineering</div>
@@ -2710,6 +2797,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Livestream Tips",title:"Livestreaming Worship Services",description:"Technical basics for online worship",videoId:"6gDnOEb0m1A",takeaways:["Online worship extends your reach","Audio quality matters more than video","Engage online viewers intentionally"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/6gDnOEb0m1A/maxresdefault.jpg" alt="Livestreaming"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Livestream Tips</div>
@@ -2719,6 +2807,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"ProPresenter Tips",title:"Using Presentation Software",description:"ProPresenter and lyrics projection best practices",videoId:"lGVZ2N5OqP0",takeaways:["Clear lyrics help congregation sing","Test all slides before service","Have a backup plan for tech failures"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/lGVZ2N5OqP0/maxresdefault.jpg" alt="Presentation Software"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">ProPresenter Tips</div>
@@ -2728,6 +2817,7 @@
                 </div>
                 <div class="resource-card" onclick='openModal({category:"Tech Ministry",title:"Building a Tech Team",description:"Recruiting and training technical volunteers",videoId:"Y5KLBJNBZMo",takeaways:["Tech teams need spiritual formation too","Train people, do not just use them","Good tech serves the congregation invisibly"]})'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/Y5KLBJNBZMo/maxresdefault.jpg" alt="Building Tech Team"><div class="card-play-icon"></div></div>
                     <div class="card-content">
                         <div class="card-category">Tech Ministry</div>
@@ -2776,6 +2866,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📜</div>
                         <img src="https://img.youtube.com/vi/cGvZJwk-7Gc/maxresdefault.jpg" alt="Psalm 100">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2814,6 +2905,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/U5p9K4GFL20/maxresdefault.jpg" alt="John 4:24">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2852,6 +2944,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/TqO9S59TmKE/maxresdefault.jpg" alt="Revelation 4-5">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2890,6 +2983,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/KI9hZlGa6DI/maxresdefault.jpg" alt="Romans 12:1">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2928,6 +3022,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/PUtRdv3sxLM/maxresdefault.jpg" alt="Psalm 95">
                         <div class="card-play-icon"></div>
                     </div>
@@ -2966,6 +3061,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/2JZovFGciFQ/maxresdefault.jpg" alt="Colossians 3:16">
                         <div class="card-play-icon"></div>
                     </div>
@@ -3012,6 +3108,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">🙌</div>
                         <img src="https://img.youtube.com/vi/zMqGCLt4VTU/maxresdefault.jpg" alt="Opening Prompts">
                         <div class="card-play-icon"></div>
                     </div>
@@ -3046,6 +3143,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/rjBdpDdQP0Q/maxresdefault.jpg" alt="Encouraging Participation">
                         <div class="card-play-icon"></div>
                     </div>
@@ -3080,6 +3178,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/sWMVVZKJ8CI/maxresdefault.jpg" alt="Redirecting to God">
                         <div class="card-play-icon"></div>
                     </div>
@@ -3114,6 +3213,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/qBFOrZlKqt0/maxresdefault.jpg" alt="Creating Space">
                         <div class="card-play-icon"></div>
                     </div>
@@ -3148,6 +3248,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/vZbPdwucQIU/maxresdefault.jpg" alt="Declaring Truth">
                         <div class="card-play-icon"></div>
                     </div>
@@ -3182,6 +3283,7 @@
                     ]
                 })'>
                     <div class="card-image">
+                        <div class="card-category-icon">📖</div>
                         <img src="https://img.youtube.com/vi/l9vn5UvsHvM/maxresdefault.jpg" alt="Closing with Commission">
                         <div class="card-play-icon"></div>
                     </div>
